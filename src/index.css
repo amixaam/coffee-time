@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@400;700&display=swap");
+
+:root {
+    --background: #222831;
+    --primary: #29a19c;
+    --secondary: #51565e;
+    --text: white;
+
+    --landing: 9rem;
+    --h1: 8rem;
+    --h2-300: 5rem;
+    --h2-100: 3rem;
+    --h2: 1.75rem;
+    --p-100: 1.2rem;
+    --p: 0.8rem;
+}
+
+* {
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text);
+    letter-spacing: 0.1rem;
+    /* border: 1px solid red; */
+}
+
+section {
+    /* border-top: 1px solid blue; */
+    /* border-bottom: 1px solid blue; */
+}
+
+body {
+    background-color: var(--background);
+}
+
+.content-margins {
+    width: min(85rem, 100%);
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.content-margins-big {
+    width: min(77.5rem, 100%);
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+h1 {
+    font-family: "Grand Hotel", cursive;
+    font-size: var(--h1);
+    letter-spacing: 0.5rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: var(--h2);
+}
+
+p {
+    font-size: var(--p);
+    letter-spacing: 0.1rem;
+    line-height: 170%;
+}
+
+.flex-button {
+    font-weight: bold;
+    font-size: var(--h2);
+    text-transform: capitalize;
+
+    background-color: var(--primary);
+    padding: 0.5rem 1.25rem;
+    width: fit-content;
+
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+.dark-v {
+    background-color: var(--background);
+}
+.flex-button:hover {
+    filter: brightness(1.2);
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.p-abs {
+    position: absolute;
+}
+
+.fancy-text {
+    font-family: "Grand Hotel", cursive;
+    font-size: var(--h2-100);
+}
