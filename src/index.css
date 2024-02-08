@@ -26,11 +26,6 @@
     /* border: 1px solid red; */
 }
 
-section {
-    /* border-top: 1px solid blue; */
-    /* border-bottom: 1px solid blue; */
-}
-
 body {
     background-color: var(--background);
 }

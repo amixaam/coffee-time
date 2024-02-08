@@ -11,7 +11,6 @@ import wave3 from "./assets/waves/wave3.png";
 import wave4 from "./assets/waves/wave4.png";
 import wave5 from "./assets/waves/wave5.png";
 
-import voucher from "./assets/images/voucher.png";
 import ella from "./assets/images/ella.png";
 import john from "./assets/images/john.png";
 
@@ -24,14 +23,20 @@ import igIcon from "./assets/icons/ig.png";
 import twtIcon from "./assets/icons/twt.png";
 import ytIcon from "./assets/icons/yt.png";
 
+import waveBottom from "./assets/voucher/waveBottom.png";
+import waveTop from "./assets/voucher/waveTop.png";
+import imageWDiscount from "./assets/voucher/imageWDiscount.png";
+
 const Navbar = () => {
     return (
         <nav className="content-margins">
             <div className="left-side">
-                <a href="#" className="selected">
+                <a href="#" className="selected hide-s-screen">
                     Home
                 </a>
-                <a href="#">About</a>
+                <a href="#" className="hide-s-screen">
+                    About
+                </a>
                 <a href="#">Menu</a>
                 <a href="#">Blog</a>
                 <a href="#">Shop</a>
@@ -45,7 +50,7 @@ const Footer = () => {
     return (
         <footer className="flex-col">
             <div className="contacts-wrapper content-margins">
-                <img src={logo} alt="Coffee Time logo" />
+                <img src={logo} alt="Coffee Time logo" className="logo" />
                 <div className="information flex-col">
                     <h2>Information.</h2>
                     <div className="links flex-col">
@@ -66,12 +71,16 @@ const Footer = () => {
             </div>
             <div className="footer-nav content-margins flex-row">
                 <div className="left-side flex-row">
-                    <a href="#">Home</a>
+                    <a href="#" className="hide-s-screen">
+                        Home
+                    </a>
                     <a href="#">About</a>
                     <a href="#">Menu</a>
                     <a href="#">Blog</a>
                     <a href="#">Shop</a>
-                    <a href="#">Contact</a>
+                    <a href="#" className="hide-s-screen">
+                        Contact
+                    </a>
                 </div>
                 <div className="socials flex-row">
                     <a href="#">
@@ -112,7 +121,7 @@ function App() {
                 <img src={wave1} alt="" className="transition p-abs" />
 
                 <div className="content-wrapper flex-col content-margins">
-                    <h1>Coffee Time</h1>
+                    <h1 className="header-title">Coffee Time</h1>
                     <div className="headline flex-col">
                         <h2>your headline</h2>
                         <p>
@@ -128,7 +137,11 @@ function App() {
                 <div className="content-wrapper flex-col content-margins-big">
                     <div className="call-to-action flex-col">
                         <h1>Black Coffees</h1>
-                        <Button content="order now" color="dark" />
+                        <Button
+                            content="order now"
+                            color="dark"
+                            className="hide-s-screen-btn hide-s-screen-btn-d"
+                        />
                     </div>
                     <div className="showcase flex-col">
                         <img src={coffeeImage} alt="image of a coffee mug" />
@@ -138,6 +151,11 @@ function App() {
                             eligendi, quos veritatis debitis sunt neque sed aut
                             natus, iste voluptatum. Velit at accusamus dolorum.
                         </p>
+                        <Button
+                            content="order now"
+                            color="dark"
+                            className="show-s-screen show-s-screen-d"
+                        />
                     </div>
                 </div>
             </section>
@@ -154,17 +172,24 @@ function App() {
                             eligendi, quos veritatis debitis sunt neque sed aut
                             natus, iste voluptatum. Velit at accusamus dolorum.
                         </p>
+                        <Button content="order now" className="show-s-screen" />
                     </div>
                     <div className="call-to-action flex-col">
                         <h1>Hot Coffees</h1>
-                        <Button content="order now" />
+                        <Button
+                            content="order now"
+                            className="hide-s-screen-btn"
+                        />
                     </div>
                 </div>
 
                 <div className="content-wrapper-l flex-col content-margins-big">
                     <div className="call-to-action flex-col">
                         <h1>White Coffees</h1>
-                        <Button content="order now" />
+                        <Button
+                            content="order now"
+                            className="hide-s-screen-btn"
+                        />
                     </div>
                     <div className="showcase flex-col">
                         <img src={coffeeImage2} alt="image of a coffee mug" />
@@ -175,12 +200,62 @@ function App() {
                             natus, iste voluptatum. Velit at accusamus dolorum.
                             Nobis accusamus aperiam deleniti, dicta eligendi.
                         </p>
+                        <Button content="order now" className="show-s-screen" />
                     </div>
                 </div>
                 <div className="voucher-wrapper flex-col content-margins-big">
                     <div className="voucher flex-col">
                         <h1>Voucher</h1>
-                        <img src={voucher} alt="Image of a voucher 45% off" />
+                        <div className="card">
+                            <img
+                                src={logo}
+                                alt="Coffee Time logo"
+                                className="logo"
+                            />
+                            <img src={waveTop} alt="" className="wave-top" />
+                            <img
+                                src={waveBottom}
+                                alt=""
+                                className="wave-bottom"
+                            />
+                            <img
+                                src={imageWDiscount}
+                                alt="Image with coffee with a 45% discount"
+                                className="image-w-discount"
+                            />
+                            <div className="content">
+                                <p className="fancy-text">Voucher Discount</p>
+                                <p className="description">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Fugit quas qui porro
+                                    accusantium, sequi deserunt voluptatem
+                                    tenetur perspiciatis.
+                                </p>
+                                <button className="small-button">
+                                    validate untill: 01.05.2020
+                                </button>
+                            </div>
+                            <div className="socials">
+                                <div className="social">
+                                    <div className="border">
+                                        <img src={twtIcon} />
+                                    </div>
+                                    <p>your account</p>
+                                </div>
+                                <div className="social">
+                                    <div className="border">
+                                        <img src={igIcon} />
+                                    </div>
+                                    <p>your account</p>
+                                </div>
+                                <div className="social">
+                                    <div className="border fb">
+                                        <img src={fbIcon} />
+                                    </div>
+                                    <p>your account</p>
+                                </div>
+                            </div>
+                        </div>
                         <Button content="get voucher now" />
                     </div>
                     <div className="reviews flex-col">
