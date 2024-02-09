@@ -118,6 +118,7 @@ footer {
 
 .black-coffee-wrapper {
     background-color: var(--primary);
+    position: relative;
 
     .content-wrapper {
         display: grid;
@@ -376,6 +377,7 @@ footer {
 
 .open-times-wrapper {
     background-color: var(--primary);
+    position: relative;
     align-items: center;
     gap: 5rem;
     padding: 2rem 0rem;
@@ -623,6 +625,14 @@ footer {
 
     .show-s-screen {
         display: block !important;
+        width: 100% !important;
+    }
+    .show-s {
+        display: block !important;
+    }
+    .fake-card {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -639,8 +649,10 @@ footer {
     border: none;
     border-radius: 12px;
     transition: 0.3s ease;
+    width: fit-content;
 }
-.show-s-screen {
+.show-s-screen,
+.show-s {
     display: none;
 }
 .show-s-screen-d,

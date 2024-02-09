@@ -4,6 +4,7 @@ import logo from "./assets/logo.png";
 import heroImage from "./assets/images/775.png";
 import coffeeImage from "./assets/images/776.png";
 import coffeeImage2 from "./assets/images/777.png";
+import coffeImage3 from "./assets/images/778.png";
 
 import wave1 from "./assets/waves/wave1.png";
 import wave2 from "./assets/waves/wave2.png";
@@ -13,6 +14,8 @@ import wave5 from "./assets/waves/wave5.png";
 
 import ella from "./assets/images/ella.png";
 import john from "./assets/images/john.png";
+
+import voucher from "./assets/images/voucher.png";
 
 import newYork from "./assets/images/newYork.png";
 import paris from "./assets/images/paris.png";
@@ -26,6 +29,10 @@ import ytIcon from "./assets/icons/yt.png";
 import waveBottom from "./assets/voucher/waveBottom.png";
 import waveTop from "./assets/voucher/waveTop.png";
 import imageWDiscount from "./assets/voucher/imageWDiscount.png";
+
+import coffeeBeanIcon from "./assets/icons/coffeeBean.png";
+import coffeeIcon from "./assets/icons/coffee.png";
+import coffeePotIcon from "./assets/icons/coffeePot.png";
 
 const Navbar = () => {
     return (
@@ -100,7 +107,6 @@ const Footer = () => {
         </footer>
     );
 };
-
 const Button = ({ content = "button", color = "light", ...props }) => {
     return (
         <button
@@ -111,6 +117,27 @@ const Button = ({ content = "button", color = "light", ...props }) => {
         </button>
     );
 };
+export const Icon = ({ type, size, top, left, rotate, hideMobile = true }) => {
+    const imgRotation = rotate ? rotate : 0;
+    const imgSize = size ? size : "auto";
+    const imgTop = top ? top : "0";
+    const imgLeft = left ? left : "0";
+
+    return (
+        <img
+            src={type}
+            className={hideMobile ? "hide-s-screen" : ""}
+            style={{
+                position: "absolute",
+                rotate: imgRotation,
+                height: imgSize,
+                top: imgTop,
+                left: imgLeft,
+                filter: "brightness(0.4)",
+            }}
+        />
+    );
+};
 
 function App() {
     return (
@@ -119,6 +146,28 @@ function App() {
             <header className="hero-wrapper">
                 <img src={heroImage} alt="" className="hero-image p-abs" />
                 <img src={wave1} alt="" className="transition p-abs" />
+
+                <Icon
+                    type={coffeeIcon}
+                    size="70px"
+                    top="0"
+                    left="55rem"
+                    rotate="35deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="15rem"
+                    left="45rem"
+                    rotate="50deg"
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="80px"
+                    top="24rem"
+                    left="27rem"
+                    rotate="0deg"
+                />
 
                 <div className="content-wrapper flex-col content-margins">
                     <h1 className="header-title">Coffee Time</h1>
@@ -134,6 +183,49 @@ function App() {
                 </div>
             </header>
             <section className="black-coffee-wrapper flex-col">
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="70px"
+                    top="-5rem"
+                    left="16rem"
+                    rotate="-25deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="3rem"
+                    left="42rem"
+                    rotate="45deg"
+                />
+                <Icon
+                    type={coffeeIcon}
+                    size="100px"
+                    top="0rem"
+                    left="85rem"
+                    rotate="35deg"
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="120px"
+                    top="20rem"
+                    left="40rem"
+                    rotate="-10deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="70px"
+                    top="25rem"
+                    left="85rem"
+                    rotate="45deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="37rem"
+                    left="12rem"
+                    rotate="-15deg"
+                />
+
                 <div className="content-wrapper flex-col content-margins-big">
                     <div className="call-to-action flex-col">
                         <h1>Black Coffees</h1>
@@ -160,12 +252,111 @@ function App() {
                 </div>
             </section>
             <main className="main-wrapper flex-col">
+                <Icon
+                    type={coffeeIcon}
+                    size="90px"
+                    top="15rem"
+                    left="6rem"
+                    rotate="0deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="16rem"
+                    left="50rem"
+                    rotate="50deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="70px"
+                    top="30rem"
+                    left="88rem"
+                    rotate="50deg"
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="100px"
+                    top="45rem"
+                    left="53rem"
+                    rotate="50deg"
+                />
+                <Icon
+                    type={coffeeIcon}
+                    size="70px"
+                    top="65rem"
+                    left="88rem"
+                    rotate="25deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="70px"
+                    top="115rem"
+                    left="82rem"
+                    rotate="0deg"
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="120px"
+                    top="138rem"
+                    left="80rem"
+                    rotate="45deg"
+                />
+                <Icon
+                    type={coffeeIcon}
+                    size="100px"
+                    top="175rem"
+                    left="81rem"
+                    rotate="20deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="77rem"
+                    left="45rem"
+                    rotate="-25deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="75px"
+                    top="165rem"
+                    left="44rem"
+                    rotate="35deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="57rem"
+                    left="20rem"
+                    rotate="-15deg"
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="110px"
+                    top="100rem"
+                    left="20rem"
+                    rotate="0deg"
+                />
+                <Icon
+                    type={coffeeIcon}
+                    size="100px"
+                    top="130rem"
+                    left="10rem"
+                    rotate="0deg"
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="110px"
+                    top="175rem"
+                    left="7rem"
+                    rotate="0deg"
+                />
+
                 <img src={wave2} alt="" className="transition-top p-abs" />
                 <img src={wave3} alt="" className="transition-bottom p-abs" />
 
                 <div className="content-wrapper-r flex-col content-margins-big">
                     <div className="showcase flex-col">
-                        <img src={coffeeImage} alt="image of a coffee mug" />
+                        <img src={coffeImage3} alt="image of a coffee mug" />
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Nobis accusamus aperiam deleniti, dicta
@@ -206,7 +397,40 @@ function App() {
                 <div className="voucher-wrapper flex-col content-margins-big">
                     <div className="voucher flex-col">
                         <h1>Voucher</h1>
-                        <div className="card">
+                        <img
+                            src={voucher}
+                            alt="A voucher discount for 45% off coffee"
+                            className="show-s fake-card"
+                        />
+                        <div className="card hide-s-screen">
+                            <Icon
+                                type={coffeeBeanIcon}
+                                size="25px"
+                                top="5.5rem"
+                                left="24rem"
+                                rotate="-15deg"
+                            />
+                            <Icon
+                                type={coffeePotIcon}
+                                size="40px"
+                                top="14.5rem"
+                                left="21rem"
+                                rotate="-15deg"
+                            />
+                            <Icon
+                                type={coffeeBeanIcon}
+                                size="35px"
+                                top="14rem"
+                                left="38rem"
+                                rotate="45deg"
+                            />
+                            <Icon
+                                type={coffeeIcon}
+                                size="35px"
+                                top="6rem"
+                                left="34.5rem"
+                                rotate="35deg"
+                            />
                             <img
                                 src={logo}
                                 alt="Coffee Time logo"
@@ -286,6 +510,36 @@ function App() {
                 </div>
             </main>
             <section className="open-times-wrapper flex-col">
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="5rem"
+                    left="15rem"
+                    rotate="-17deg"
+                />
+                <Icon
+                    type={coffeeIcon}
+                    size="160px"
+                    top="15rem"
+                    left="20rem"
+                    rotate="0deg"
+                />
+
+                <Icon
+                    type={coffeePotIcon}
+                    size="130px"
+                    top="5rem"
+                    left="75rem"
+                    rotate="45deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="120px"
+                    top="25rem"
+                    left="70rem"
+                    rotate="45deg"
+                />
+
                 <h1>We are Open</h1>
                 <div className="open-times flex-col">
                     <h3>Monday - Friday</h3>
@@ -297,6 +551,34 @@ function App() {
                 </div>
             </section>
             <section className="branches-wrapper">
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="15rem"
+                    left="20rem"
+                    rotate="45deg"
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="18rem"
+                    left="85rem"
+                    rotate="-20deg"
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="80px"
+                    top="55rem"
+                    left="30rem"
+                    rotate="45deg"
+                />
+                <Icon
+                    type={coffeeIcon}
+                    size="70px"
+                    top="58rem"
+                    left="60rem"
+                    rotate="0deg"
+                />
                 <img src={wave4} alt="" className="transition-top p-abs" />
                 <img src={wave5} alt="" className="transition-bottom p-abs" />
 
