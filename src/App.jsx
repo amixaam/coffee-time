@@ -25,6 +25,7 @@ import fbIcon from "./assets/icons/fb.png";
 import igIcon from "./assets/icons/ig.png";
 import twtIcon from "./assets/icons/twt.png";
 import ytIcon from "./assets/icons/yt.png";
+import whyIcon from "./assets/icons/why.png";
 
 import waveBottom from "./assets/voucher/waveBottom.png";
 import waveTop from "./assets/voucher/waveTop.png";
@@ -33,10 +34,71 @@ import imageWDiscount from "./assets/voucher/imageWDiscount.png";
 import coffeeBeanIcon from "./assets/icons/coffeeBean.png";
 import coffeeIcon from "./assets/icons/coffee.png";
 import coffeePotIcon from "./assets/icons/coffeePot.png";
+import FriesBarPopup from "./Components/FriesBarPopup";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ badMode }) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleState = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrolled = window.scrollY > 100;
+            setIsScrolled(scrolled);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    if (badMode) {
+        return (
+            <>
+                <FriesBarPopup isOpen={isMenuOpen} toggleState={toggleState} />
+                <nav
+                    className={`content-margins sm-between ${
+                        isScrolled ? "scrolled" : ""
+                    }`}
+                >
+                    <div className="left-side s">
+                        <a href="#" className="selected hide-s-screen">
+                            Home
+                        </a>
+                        <a href="#" className="hide-s-screen">
+                            About
+                        </a>
+                        <a href="#" className="hide-s-screen">
+                            Menu
+                        </a>
+                        <a href="#" className="hide-s-screen">
+                            Blog
+                        </a>
+                        <a href="#" className="hide-s-screen">
+                            Shop
+                        </a>
+                        <a href="#" className="hide-s-screen">
+                            Contact
+                        </a>
+                        <button className="s-m-s" onClick={toggleState}>
+                            <img src={whyIcon} alt="" />
+                        </button>
+                    </div>
+                    <img src={logo} alt="Coffee Time logo" className="logo" />
+                </nav>
+            </>
+        );
+    }
+
     return (
-        <nav className="content-margins">
+        <nav className={`content-margins ${isScrolled ? "scrolled" : ""}`}>
             <div className="left-side">
                 <a href="#" className="selected hide-s-screen">
                     Home
@@ -140,9 +202,12 @@ export const Icon = ({ type, size, top, left, rotate, hideMobile = true }) => {
 };
 
 function App() {
+    const badMode = false;
+
     return (
         <main className="app-view">
-            <Navbar />
+            <Navbar badMode={badMode} />
+            <div className={badMode ? "spacer-bad" : "spacer"}></div>
             <header className="hero-wrapper">
                 <img src={heroImage} alt="" className="hero-image p-abs" />
                 <img src={wave1} alt="" className="transition p-abs" />
