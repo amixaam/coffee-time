@@ -64,7 +64,7 @@ const Navbar = ({ badMode }) => {
             <>
                 <FriesBarPopup isOpen={isMenuOpen} toggleState={toggleState} />
                 <nav
-                    className={`content-margins sm-between ${
+                    className={`c-margins sm-between ${
                         isScrolled ? "scrolled" : ""
                     }`}
                 >
@@ -98,7 +98,7 @@ const Navbar = ({ badMode }) => {
     }
 
     return (
-        <nav className={`content-margins ${isScrolled ? "scrolled" : ""}`}>
+        <nav className={`c-margins ${isScrolled ? "scrolled" : ""}`}>
             <div className="left-side">
                 <a href="#" className="selected hide-s-screen">
                     Home
@@ -188,7 +188,7 @@ export const Icon = ({ type, size, top, left, rotate, hideMobile = true }) => {
     return (
         <img
             src={type}
-            className={hideMobile ? "hide-s-screen" : ""}
+            className={hideMobile ? "hide-s-screen" : "show-s"}
             style={{
                 position: "absolute",
                 rotate: imgRotation,
@@ -289,6 +289,23 @@ function App() {
                     top="37rem"
                     left="12rem"
                     rotate="-15deg"
+                />
+
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="60px"
+                    top="0rem"
+                    left="2rem"
+                    rotate="-25deg"
+                    hideMobile={false}
+                />
+                <Icon
+                    type={coffeePotIcon}
+                    size="80px"
+                    top="15rem"
+                    left="20rem"
+                    rotate="45deg"
+                    hideMobile={false}
                 />
 
                 <div className="content-wrapper flex-col content-margins-big">
@@ -414,6 +431,57 @@ function App() {
                     top="175rem"
                     left="7rem"
                     rotate="0deg"
+                />
+
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="60px"
+                    top="14rem"
+                    left="2rem"
+                    rotate="-25deg"
+                    hideMobile={false}
+                />
+                <Icon
+                    type={coffeeIcon}
+                    size="80px"
+                    top="27rem"
+                    left="20rem"
+                    rotate="45deg"
+                    hideMobile={false}
+                />
+
+                <Icon
+                    type={coffeePotIcon}
+                    size="90px"
+                    top="96rem"
+                    left="2rem"
+                    rotate="-25deg"
+                    hideMobile={false}
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="70px"
+                    top="84rem"
+                    left="20rem"
+                    rotate="0deg"
+                    hideMobile={false}
+                />
+
+                <Icon
+                    type={coffeePotIcon}
+                    size="60px"
+                    top="192rem"
+                    left="1rem"
+                    rotate="-25deg"
+                    hideMobile={false}
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="40px"
+                    top="182rem"
+                    left="22rem"
+                    rotate="0deg"
+                    hideMobile={false}
                 />
 
                 <img src={wave2} alt="" className="transition-top p-abs" />
@@ -643,6 +711,23 @@ function App() {
                     top="58rem"
                     left="60rem"
                     rotate="0deg"
+                />
+
+                <Icon
+                    type={coffeePotIcon}
+                    size="60px"
+                    top="14rem"
+                    left="2rem"
+                    rotate="-25deg"
+                    hideMobile={false}
+                />
+                <Icon
+                    type={coffeeBeanIcon}
+                    size="50px"
+                    top="22rem"
+                    left="22rem"
+                    rotate="45deg"
+                    hideMobile={false}
                 />
                 <img src={wave4} alt="" className="transition-top p-abs" />
                 <img src={wave5} alt="" className="transition-bottom p-abs" />

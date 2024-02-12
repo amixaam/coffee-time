@@ -11,7 +11,7 @@ export default function FriesBarPopup({ isOpen, toggleState }) {
             overlayClassName="modal-overlay"
             className="modal-content "
         >
-            <h1>Coffee Time</h1>
+            <h1 className="title">Coffee Time</h1>
             <div className="fry-menu">
                 <a href="#" className="selected">
                     Home

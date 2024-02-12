@@ -3,6 +3,10 @@
     backdrop-filter: blur(4px);
     border-bottom: 2px var(--background) solid;
 }
+.c-margins {
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
 
 nav {
     width: 100% !important;
@@ -661,6 +665,10 @@ footer {
     }
     .spacer {
         height: 10rem;
+    }
+    .c-margins {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 

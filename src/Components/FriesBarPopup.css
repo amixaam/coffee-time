@@ -26,8 +26,9 @@
     align-items: center;
     gap: 2.5rem;
 
-    h1 {
+    .title {
         margin-top: 1rem;
+        font-size: 3rem !important;
     }
     .fry-menu {
         /* background-color: rebeccapurple; */
